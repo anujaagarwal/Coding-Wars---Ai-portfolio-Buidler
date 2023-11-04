@@ -16,19 +16,13 @@ Following are the features, user interface, and technical aspects of the project
 ### 2.2 Information Input
 
 - Add a field for "Professional Summary".
-- Update to allow multiple experience entries.
-    - Each entry should have fields for:
-        - Job Title
-        - Company Name
-        - Duration
-        - Responsibilities (a list of text inputs).
+- Update to allow experience entries such as Job title, company name.
 - **Education** section to allow users to input their education details.
-    - Relevant Courses (a list of text inputs).
+    - Relevant Courses
     - Graduation Year
     - Institution Name
-    - Degree Title
-- **Skills section:** Update to allow a list of skills.
-- **Contact** section for contact information with fields for:
+- **Skills section:** to allow users add list of skills.
+- **Contact** section with fields for:
     - GitHub URL
     - LinkedIn URL
     - Twitter URL
@@ -40,7 +34,12 @@ Following are the features, user interface, and technical aspects of the project
 
 ### 2.4 Portfolio Generation
 
-- Upon submission, the form data is formatted into a GPT prompt which will be sent to openAI text completion API to generate code for the portfolio website. Users can download this code or copy it from the web app.
+- Upon submission, the form data is formatted into a GPT prompt which will be sent to openAI text completion API to generate code for the portfolio website.
+
+### 2.5 Portfolio Preview
+
+- Users should be able to preview the code generated from the GPT.
+- Users should be able to download or copy this code from your web app.
 
 ## 3. User Interface
 
@@ -51,22 +50,30 @@ Following are the features, user interface, and technical aspects of the project
 
 ### 4.1 Frontend
 
-- The app is built using HTML, Tailwind CSS, and JavaScript. (React is optional)
-- Form data is collected using HTML form elements and handled using JavaScript.
+- The app should be built using HTML, Tailwind CSS, and JavaScript. (React is optional)
 
 ### 4.2 GPT Prompt Generation
 
-- A JavaScript function named `createGptPrompt` is used to format the form data into a GPT prompt string.
-- The GPT prompt is then sent to openAI text completion API to generate code for the portfolio website.
+- Create a JavaScript function to format the form data into a GPT prompt string.
+- The GPT prompt string is then sent to the Node.js server (which will be hosted on render, refer to the deployment section 5) to generate code for the portfolio website.
 
 ### 4.3 Accessibility
 
-- Basic accessibility features such as semantic HTML and form labels are implemented to ensure the app is usable by a wide audience.
+- Basic accessibility features such as semantic HTML and form labels should be implemented to ensure the app is usable by a wide audience.
 
-## 5. Brownie points
+## 5. Deployment
 
-- Implementation of the multiple layout styles for Experience, Projects.
-- Option to allow custom Image sections/gallery.
-- Integration with the Unsplash API for image.
-- Node.js server deployed on render/vercel which can take the GPT input and send it to open AI. (refer to the nodejs app built during the 100x lab session https://github.com/Siddhant-Goswami/100xlabs-openai-nodejs-server/tree/main)
-- User preview for layout section before making a selection.
+- Frontend: If you are using vanilla JS to build this, you can deploy it on the github pages. 
+If you are using react you can use any of these, vercel, netlify or render. 
+Once it is deployed make sure to test the link and include it in the github repo.
+- Backend: This app will require a node.js API to connect to openAI with your Open AI secret key.
+    - Deploy the Node.js app to [render.com](http://render.com) as a web service similar to how you have deployed the chat app in the module 0.
+    - Refer to this Node.js app built during the 100x lab session https://github.com/Siddhant-Goswami/100xlabs-openai-nodejs-server/tree/main.
+
+## 7. Advance Features
+
+- Advanced customisation options, such as theming and custom CSS code input.
+- Advanced layout options to add custom sections and images.
+- Interactive preview: a real-time preview of the portfolio as users input their information and customize their template.
+- Responsive design: Ensure that the generated portfolio is fully responsive, looking good and functioning well on devices of all sizes.
+- Integration with the Unsplash API to add stock images.

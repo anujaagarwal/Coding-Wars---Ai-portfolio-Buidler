@@ -70,7 +70,7 @@ Once it is deployed make sure to test the link and include it in the github repo
     - Deploy the Node.js app to [render.com](http://render.com) as a web service similar to how you have deployed the chat app in the module 0.
     - Refer to this Node.js app built during the 100x lab session https://github.com/Siddhant-Goswami/100xlabs-openai-nodejs-server/tree/main.
 
-## 7. Advance Features
+## 6. Advance Features
 
 - Advanced customisation options, such as theming and custom CSS code input.
 - Advanced layout options to add custom sections and images.
